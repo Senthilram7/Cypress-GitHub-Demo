@@ -1,0 +1,14 @@
+{
+"url" :"http://demoqa.com/",
+"demoqaurl" :"https://www.toolsqa.com/selenium-training/",
+"name" :"SenthilRam",
+"lastname" :"QA",
+"email" :"testdata@test.com",
+"mobile" :"1234567890",
+"country" :"Aruba",
+"city" :"testdata",
+"message" : "values entered",
+"productName" : ["Blackberry", "iphone X", "Nokia Edge"]
+
+
+}

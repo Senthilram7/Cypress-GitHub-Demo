@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-28T08:03:19.101Z",
+    "end": "2022-11-28T08:03:47.558Z",
+    "duration": 28457,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bd143809-a27c-47a6-bc80-5869b2086a44",
+      "title": "",
+      "fullFile": "cypress\\Integration\\examples\\E2E-Validation.js",
+      "file": "cypress\\Integration\\examples\\E2E-Validation.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e6d7f5bf-f6d5-435c-bf36-da20d1087f8c",
+          "title": "Validation test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Form validation ",
+              "fullTitle": "Validation test suite Form validation ",
+              "timedOut": null,
+              "duration": 23384,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var homepage = new _Pageobjectpattern[\"default\"]();\n//Navigating to the page\nhomepage.getURL().visit(this.data.url);\n//validating URL\ncy.url().should('include', 'https://demoqa.com/');\n//Method 1- Opening new tab we have handled to remove attr\ncy.get('.home-banner a').invoke('removeAttr', 'target').click();\n//2nd method- prop jquerymethod used to get the value of href property for child tab or window\n/* cy.get('.home-banner a').then(function(el)\n {\nconst url=el.prop('href')\ncy.log(url)\ncy.visit(url)\n\n }) */\n//Text Validation on the page\ncy.get('.enroll__heading').should('contains.text', 'Selenium');\n//Click on Registration button\nhomepage.clickonButton().click();\n//Values Entering into input fields\nhomepage.getName().type(this.data.name);\nhomepage.getLastName().type(this.data.lastname);\nhomepage.getemail().type(this.data.email);\nhomepage.getmobile().type(this.data.mobile);\nhomepage.getcountry().select(this.data.country);\nhomepage.getcity().type(this.data.city);\ncy.wait(3000);\n//cy.get('button.modal__close').click()  \nhomepage.getmessage().type(this.data.message);\n//Submit the form\nhomepage.submit().click();\n/* cy.get('input:invalid').should('have.length', 1)\ncy.get('[type=\"text\"]').then(($input) => {\n  expect($input[0].validationMessage).to.eq('Please fill out this field.') \n})\n\n  })\n//cy.get('[button.btn.btn-block.btn-primary]:invalid').invoke('prop', 'validationMessage').should('contain', 'Please fill out this field.')\n  //Success Message validation\n  //cy.get('div.alert-success').should('contains.text','We have received your message. We will soon get in touch.')\n*/",
+              "err": {},
+              "uuid": "10555494-d216-40a6-8881-6a66cc20c06f",
+              "parentUUID": "e6d7f5bf-f6d5-435c-bf36-da20d1087f8c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "10555494-d216-40a6-8881-6a66cc20c06f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23384,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

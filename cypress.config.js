@@ -24,6 +24,5 @@ module.exports = defineConfig({
 
     specPattern: 'cypress/Integration/examples/E2E-Validation.js'
   },
-
   chromeWebSecurity: false
 });
